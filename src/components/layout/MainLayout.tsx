@@ -1,7 +1,7 @@
-import { Layout, Menu } from 'antd';
+import { Layout, Menu, MenuProps } from 'antd';
 const { Content, Footer, Header, Sider } = Layout;
 
-const items = [
+const items: MenuProps['items'] = [
   {
     key: 'asdf',
     label: 'Dashboard',
