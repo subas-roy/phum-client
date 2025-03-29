@@ -4,23 +4,23 @@ const { Content, Footer, Header, Sider } = Layout;
 
 const items: MenuProps['items'] = [
   {
-    key: 'asdf',
+    key: 'Dashboard',
     label: 'Dashboard',
   },
   {
-    key: 'asdfg',
-    label: 'Profile',
-  },
-  {
-    key: 'asdfgh',
+    key: 'User Management',
     label: 'User Management',
     children: [
       {
-        key: 'ssd',
+        key: 'Create Admin',
         label: 'Create Admin',
       },
       {
-        key: 'sdd',
+        key: 'Create Faculty',
+        label: 'Create Faculty',
+      },
+      {
+        key: 'Create Student',
         label: 'Create Student',
       },
     ],
