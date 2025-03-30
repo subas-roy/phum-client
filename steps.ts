@@ -14,4 +14,13 @@
  * Routing paths (role based)
  * -----------------------------
  *    www.maindomain/admin/create-stuent
+ *
+ * -----------------
+ *  Redux Toolkit
+ * -----------------
+ *    1. npm install @reduxjs/toolkit react-redux
+ *    2.
+ *
+ *
+ *
  */
