@@ -47,10 +47,14 @@ const newArray = adminPaths2.reduce((acc, item) => {
     acc.push({
       key: item.name,
       label: item.name,
+      children: item.children.map((child) => ({
+        key: child.name,
+        label: child.name,
+      })),
     });
   }
 
   return acc;
 }, []);
 
-console.log(newArray);
+console.log(JSON.stringify(newArray));
