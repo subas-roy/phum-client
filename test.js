@@ -43,14 +43,12 @@ const newArray = adminPaths2.reduce((acc, item) => {
     });
   }
 
-  // if (item.children) {
-  //   item.children.forEach((child) => {
-  //     acc.push({
-  //       path: child.path,
-  //       element: child.element,
-  //     });
-  //   });
-  // }
+  if (item.children) {
+    acc.push({
+      key: item.name,
+      label: item.name,
+    });
+  }
 
   return acc;
 }, []);
