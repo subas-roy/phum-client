@@ -1,20 +1,9 @@
-import { ReactNode } from 'react';
 import AdminDashboard from '../pages/admin/AdminDashboard';
 import CreateAdmin from '../pages/admin/CreateAdmin';
 import CreateFaculty from '../pages/admin/CreateFaculty';
 import CreateStudent from '../pages/admin/CreateStudent';
 import { NavLink } from 'react-router-dom';
-
-type TRoute = {
-  path: string;
-  element: ReactNode;
-};
-
-type TSidebarItem = {
-  key: string;
-  label: ReactNode;
-  children?: TSidebarItem[];
-};
+import { TSidebarItem } from '../types/sidebar.types';
 
 // A centralised array for routes and sidebar items (like union)
 export const adminPaths = [
