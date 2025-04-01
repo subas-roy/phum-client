@@ -10,7 +10,7 @@ const Login = () => {
     },
   });
 
-  const [login, { data, error }] = useLoginMutation();
+  const [login, { error }] = useLoginMutation();
 
   const onSubmit = async (data) => {
     const userInfo = {
@@ -18,7 +18,7 @@ const Login = () => {
       password: data.password,
     };
 
-    const res = await login(userInfo); // send data to useLoginMutation
+    const res = await login(userInfo).unwrap(); // send data to useLoginMutation
 
     console.log(res);
   };
