@@ -12,16 +12,15 @@ const Login = () => {
 
   const [login, { data, error }] = useLoginMutation();
 
-  console.log('data =>', data);
-  console.log('error =>', error);
-
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     const userInfo = {
       id: data.id,
       password: data.password,
     };
 
-    login(userInfo); // send data to useLoginMutation
+    const res = await login(userInfo); // send data to useLoginMutation
+
+    console.log(res);
   };
 
   return (
