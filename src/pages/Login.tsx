@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useLoginMutation } from '../redux/features/auth/authApi';
 import { useAppDispatch } from '../redux/hooks';
 import { setUser } from '../redux/features/auth/authSlice';
+import { verifyToken } from '../utils/verifyToken';
 
 const Login = () => {
   const dispatch = useAppDispatch();
@@ -23,6 +24,9 @@ const Login = () => {
     };
 
     const res = await login(userInfo).unwrap(); // send data to useLoginMutation
+
+    const user = verifyToken(res.data.accessToken);
+    console.log(user);
 
     dispatch(setUser({ user: {}, token: res.data.accessToken }));
   };
