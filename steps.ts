@@ -21,6 +21,10 @@
  *    1. npm install @reduxjs/toolkit react-redux
  *    2. create and connect store, Infer the `RootState` and `AppDispatch` types from the store itself, create hooks
  *
+ *--------------
+ *  jwt-decode
+ *--------------
+ *    npm i jwt-decode
  *
  *
  */
