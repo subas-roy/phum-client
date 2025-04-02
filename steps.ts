@@ -33,4 +33,6 @@
  *  Step 2: get accessToken and keep in local state
  *  Step 3: decode accessToken get the user and set user in local state
  *
+ * npm install sonner (An opinionated toast component for React)
+ *
  */
