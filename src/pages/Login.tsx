@@ -2,7 +2,7 @@ import { Button } from 'antd';
 import { useForm } from 'react-hook-form';
 import { useLoginMutation } from '../redux/features/auth/authApi';
 import { useAppDispatch } from '../redux/hooks';
-import { setUser } from '../redux/features/auth/authSlice';
+import { setUser, TUser } from '../redux/features/auth/authSlice';
 import { verifyToken } from '../utils/verifyToken';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
@@ -29,7 +29,7 @@ const Login = () => {
         password: data.password,
       };
       const res = await login(userInfo).unwrap(); // send data to useLoginMutation
-      const user = verifyToken(res.data.accessToken);
+      const user = verifyToken(res.data.accessToken) as TUser;
       dispatch(setUser({ user: user, token: res.data.accessToken }));
       toast.success('Logged in', { id: toastId, duration: 2000 });
       navigate(`/${user.role}/dashboard`);
